@@ -1,62 +1,95 @@
 # Multiplayer CHESS
-This is a basic version of Chess. The objective is to take out the opponents king.
 
-The control keys are:
-- "mouse"
+A multiplayer chess game built in Python using sockets and pygame.  
+The project uses a client server architecture to synchronize game state across players in real time.
 
-Used libraries:
+## Overview
+
+This system runs chess as a networked application with one authoritative server.  
+The server manages game state, validates moves, and keeps both clients synchronized during gameplay.
+
+## Core Features
+
+- Multiplayer gameplay using sockets
+- Server authoritative game state
+- Real time move synchronization
+- Full chess rule handling
+- Turn based system with validation
+- Basic UI built with pygame
+- Check, checkmate, and forfeit states
+
+## Demo
+
+## Technical Details
+
+### Networking
+
+- Uses Python socket library for communication
+- Client server model with one host controlling game state
+- JSON based message exchange between clients and server
+- Continuous update loop for synchronization
+
+### Game Logic
+
+- Move validation handled before state updates
+- Turn enforcement handled server side
+- Game end detection for check and checkmate
+
+### Architecture
+
+- Server manages all game rules and state
+- Clients render board and send input actions
+- Separate logic for UI and game state
+
+## Requirements
+
+- Python 3.9 or higher
 - pygame
-- socket
-- uuid
-- threading
-- random
-- json
-- math
 
+## Run
 
-## Setup
+Start server:
 
-Pre-requirements:
-
-* python 3.9 >
-
-## Run the app
-
-First, make sure that you're in the right directory. If you're not, run
-```
-cd .../Chess
-```
-
-Open a terminal and run
 ```
 python server.py
 ```
 
-Open another terminal and run
+Start client:
 
-```shell
+```
 python main.py
 ```
 
-If you have another computer, run the same line again on that computer on a terminal (Must be connected to the same wifi). If you don't have another computer, you can open a new terminal and run the line of code again. 
+For multiplayer setup:
 
-## Troublshooting
+- Run server on one machine
+- Run clients on same network using server IP
 
-- If you are using two computers, try to turn off the firewall as it may mess up the connection
+## Controls
+
+- Mouse click: select and move pieces
+
+## Project Structure
+
+```
+server.py  game server and state management
+main.py    client UI and input handling
+assets/    game visuals and sprites
+```
 
 ## Limitations
 
-- Computer that isn't running the server may crash if too much data is being sent per second
+- Network lag affects responsiveness
+- Requires manual server connection
+- Large packet flow may cause instability
 
-## Screenshots
+## Future Work
 
-![Menu](Assets/Screenshots/menu.png)
-![Lobby](Assets/Screenshots/lobby.png)
-![Game](Assets/Screenshots/game.png)
-![Check](Assets/Screenshots/check.png)
-![Forfeit](Assets/Screenshots/forfeit.png)
-![Checkmate](Assets/Screenshots/checkmate.png)
+- Better move prediction
+- Matchmaking system
+- Reconnect handling
 
-## Rules
+## Notes
 
-Read up on the rules here: **[CHESS Rules](https://www.chesshouse.com/pages/chess-rules)**
+- Designed for local network play
+- Server holds full authority over game state
