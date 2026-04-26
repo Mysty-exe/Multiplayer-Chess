@@ -20,12 +20,12 @@ The server manages game state, validates moves, and keeps both clients synchroni
 
 ## Screenshots
 
-![Menu](assets/Screenshots/menu.png)
-![Lobby](assets/Screenshots/lobby.png)
-![Game](assets/Screenshots/game.png)
-![Check](assets/Screenshots/check.png)
-![Checkmate](assets/Screenshots/checkmate.png)
-![Forfeit](assets/Screenshots/forfeit.png)
+![Menu](Assets/Screenshots/menu.png)
+![Lobby](Assets/Screenshots/lobby.png)
+![Game](Assets/Screenshots/game.png)
+![Check](Assets/Screenshots/check.png)
+![Checkmate](Assets/Screenshots/checkmate.png)
+![Forfeit](Assets/Screenshots/forfeit.png)
 
 ## Technical Details
 
