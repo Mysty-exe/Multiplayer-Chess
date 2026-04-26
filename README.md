@@ -18,7 +18,14 @@ The server manages game state, validates moves, and keeps both clients synchroni
 - Basic UI built with pygame
 - Check, checkmate, and forfeit states
 
-## Demo
+## Screenshots
+
+![Menu](assets/Screenshots/menu.png)
+![Lobby](assets/Screenshots/lobby.png)
+![Game](assets/Screenshots/game.png)
+![Check](assets/Screenshots/check.png)
+![Checkmate](assets/Screenshots/checkmate.png)
+![Forfeit](assets/Screenshots/forfeit.png)
 
 ## Technical Details
 
